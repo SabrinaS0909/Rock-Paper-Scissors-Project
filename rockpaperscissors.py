@@ -1,0 +1,1 @@
+"""This is a small project of my own take on a game of Rock, Paper, Scissors"""
