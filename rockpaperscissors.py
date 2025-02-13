@@ -65,11 +65,19 @@ elif player_action == "wolf":
 #what if we made the human a wild card where it could be randomized that you could win or lose
 elif player_action == "human":
     if computer_action == "corvid":
-        print("Corvid drops from the sky due to human neonicotinoids. Well, at least the bugs are gone from its apples. You win!")
+        corvid_win_or_lose_actions = ["Corvid drops from the sky due to human neonicotinoids. Well, at least the bugs are gone from its apples. You win!", "Corvid waits for human to turn its head then attacks while its not looking, you lose!"]
+        computer_action_human_vs_corvid = random.choice(human_win_or_lose_actions)
+        print(computer_action_human_vs_corvid)
     elif computer_action == "cat":
-        print("Cat paws the bee to death, you lose!")
+        cat_win_or_lose_actions = ["", ""]
+        computer_action_human_vs_cat = random.choice(cat_win_or_lose_actions)
+        print(computer_action_human_vs_cat)
     elif computer_action == "wolf":
-        print("Wolf gets stung in the muzz and looks silly the rest of the day. You win!")
+        wolf_win_or_lose_actions = ["", ""]
+        computer_action_human_vs_wolf = random.choice(wolf_win_or_lose_actions)
+        print(computer_action_human_vs_wolf)
     else:
-        print("Human is allergic to the bee and is hospitalized. You win!")
+        bee_win_or_lose_actions = ["", ""]
+        computer_action_human_vs_bee = random.choice(bee_win_or_lose_actions)
+        print(computer_action_human_vs_bee)
 
