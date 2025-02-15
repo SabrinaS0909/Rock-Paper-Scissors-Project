@@ -42,7 +42,7 @@ while True:
         if computer_action == "bee":
             print("Bee is eaten by the corvid! You win!\n")
         elif computer_action == "cat":
-            print("Cat stalks and kills its prey, you lose!\n")
+            print("Cat stalks and kills the corvid, you lose!\n")
         elif computer_action == "wolf":
             print("Wolf befriends the corvid and they hunt prey together, you win!\n")
         else:
@@ -50,40 +50,40 @@ while True:
             #add in the computer's ability to use the human as a wild card
     elif player_action == "cat":
         if computer_action == "bee":
-            print("Bee gets pawed to death by cat! You win!\n")
+            print("Bee gets pawed to death by the cat! You win!\n")
         elif computer_action == "corvid":
             print("Corvid is stalked and killed by the highly invasive cat. You win!\n")
         elif computer_action == "wolf":
             print("Wolf steals the cat wandering it's territory for dinner. You lose!\n")
         else:
-            print("Human domesticates cat and makes it wear silly hats and posts pictures of the embarassing situation all over the internet. You lose!\n")
+            print("Human domesticates the cat and makes it wear silly hats and posts pictures of the embarassing situation all over the internet. You lose!\n")
             #add in the computer's ability to use the human as a wild card
     elif player_action == "wolf":
         if computer_action == "corvid":
             print("Corvid befriends the wolf and alerts it to prey for both to enjoy. You win!\n")
         elif computer_action == "cat":
-            print("Cat navigates the forest and is stolen by wolf for dinner. You win!\n")
+            print("Cat navigates the forest and is stolen by the wolf for dinner. You win!\n")
         elif computer_action == "bee":
-            print("Bee stings wolf in the muzz and it looks silly the rest of the day. You lose!\n")
+            print("Bee stings the wolf in the muzz and it looks silly the rest of the day. You lose!\n")
         else:
-            print("Human tests wolf boundaries with a meat-suit and gets mauled. You win!\n")
+            print("Human tests the wolf's boundaries with a meat-suit and gets mauled. You win!\n")
             #add in the computer's ability to use the human as a wild card
     #what if we made the human a wild card where it could be randomized that you could win or lose
     elif player_action == "human":
         if computer_action == "corvid":
-            corvid_win_or_lose_actions = ["Corvid drops from the sky due to human neonicotinoids. Well, at least the bugs are gone from its apples. You win!\n", "Corvid waits for human to turn its head then attacks while its not looking, you lose!\n"]
+            corvid_win_or_lose_actions = ["Corvid drops from the sky due to human neonicotinoids. Well, at least the bugs are gone from the apples. You win!\n", "Corvid waits for human to turn its head then attacks while its not looking, you lose!\n"]
             computer_action_human_vs_corvid = random.choice(corvid_win_or_lose_actions)
             print(computer_action_human_vs_corvid)
         elif computer_action == "cat":
-            cat_win_or_lose_actions = ["meow\n", "meOW\n"]
+            cat_win_or_lose_actions = ["Human adopts the cat and realizes putting forth effort for another individual is too much. The cat is dumped in the street. You lose!\n", "Cat, while being driven out of its home by someone who can no longer provide for it, turns and mauls the human with claws of fury before finding a better home elsewhere. You win!\n"]
             computer_action_human_vs_cat = random.choice(cat_win_or_lose_actions)
             print(computer_action_human_vs_cat)
         elif computer_action == "wolf":
-            wolf_win_or_lose_actions = ["bark\n", "borkin\n"]
+            wolf_win_or_lose_actions = ["Human retracts laws against indiscriminatory hunting of wolves. Wolves go extinct and species that require a keystone species destroy the ecosystem. You lose!\n", "Human attempts to hunt a wolf and instead meets the whole pack. The human is out of ammo. You win!\n"]
             computer_action_human_vs_wolf = random.choice(wolf_win_or_lose_actions)
             print(computer_action_human_vs_wolf)
         else:
-            bee_win_or_lose_actions = ["buzz\n", "puzz\n"]
+            bee_win_or_lose_actions = ["Bee does a little dance that rallies the masses to attack the human. You win!\n", "Human makes a movie about the bee that makes everyone assume it likes Jazz. It hears 'Ya like jazz?' for the remainder of its life. You lose!\n"]
             computer_action_human_vs_bee = random.choice(bee_win_or_lose_actions)
             print(computer_action_human_vs_bee)
 
