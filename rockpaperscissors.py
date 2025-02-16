@@ -36,8 +36,9 @@ while True:
         elif computer_action == "wolf":
             print("Wolf gets stung in the muzz and looks silly the rest of the day. You win!\n")
         else:
-            print("Human is allergic to the bee and is hospitalized. You win!\n")
-            #add in the computer's ability to use the human as a wild card
+            humanandbee_win_or_lose_actions = ["Human is allergic to the bee and is hospitalized. You win!\n", "bee lose situation\n"]
+            computer_action_bee_vs_human = random.choice(humanandbee_win_or_lose_actions)
+            print(computer_action_bee_vs_human)
     elif player_action == "corvid":
         if computer_action == "bee":
             print("Bee is eaten by the corvid! You win!\n")
@@ -46,8 +47,9 @@ while True:
         elif computer_action == "wolf":
             print("Wolf befriends the corvid and they hunt prey together, you win!\n")
         else:
-            print("Human destroys the corvid's natural habitat and it's forced to live in the city. You lose!\n")
-            #add in the computer's ability to use the human as a wild card
+            humanandcorvid_win_or_lose_actions = ["Human destroys the corvid's natural habitat and it's forced to live in the city. You lose!\n", "corvid win situation\n"]
+            computer_action_corvid_vs_human = random.choice(humanandcorvid_win_or_lose_actions)
+            print(computer_action_corvid_vs_human)
     elif player_action == "cat":
         if computer_action == "bee":
             print("Bee gets pawed to death by the cat! You win!\n")
@@ -56,8 +58,9 @@ while True:
         elif computer_action == "wolf":
             print("Wolf steals the cat wandering it's territory for dinner. You lose!\n")
         else:
-            print("Human domesticates the cat and makes it wear silly hats and posts pictures of the embarassing situation all over the internet. You lose!\n")
-            #add in the computer's ability to use the human as a wild card
+            humanandcat_win_or_lose_actions = ["Human domesticates the cat and makes it wear silly hats and posts pictures of the embarassing situation all over the internet. You lose!\n", "cat win situation\n"]
+            computer_action_cat_vs_human = random.choice(humanandcat_win_or_lose_actions)
+            print(computer_action_cat_vs_human)
     elif player_action == "wolf":
         if computer_action == "corvid":
             print("Corvid befriends the wolf and alerts it to prey for both to enjoy. You win!\n")
@@ -66,24 +69,24 @@ while True:
         elif computer_action == "bee":
             print("Bee stings the wolf in the muzz and it looks silly the rest of the day. You lose!\n")
         else:
-            print("Human tests the wolf's boundaries with a meat-suit and gets mauled. You win!\n")
-            #add in the computer's ability to use the human as a wild card
-    #what if we made the human a wild card where it could be randomized that you could win or lose
+            humanandwolf_win_or_lose_actions = ["Human tests the wolf's boundaries with a meat-suit and gets mauled. You win!\n", "wolf lose situation\n"]
+            computer_action_wolf_vs_human = random.choice(humanandwolf_win_or_lose_actions)
+            print(computer_action_wolf_vs_human)
     elif player_action == "human":
         if computer_action == "corvid":
             corvid_win_or_lose_actions = ["Corvid drops from the sky due to human neonicotinoids. Well, at least the bugs are gone from the apples. You win!\n", "Corvid waits for human to turn its head then attacks while its not looking, you lose!\n"]
             computer_action_human_vs_corvid = random.choice(corvid_win_or_lose_actions)
             print(computer_action_human_vs_corvid)
         elif computer_action == "cat":
-            cat_win_or_lose_actions = ["Human adopts the cat and realizes putting forth effort for another individual is too much. The cat is dumped in the street. You lose!\n", "Cat, while being driven out of its home by someone who can no longer provide for it, turns and mauls the human with claws of fury before finding a better home elsewhere. You win!\n"]
+            cat_win_or_lose_actions = ["Human adopts the cat and realizes putting forth effort for another individual is too much. The cat is dumped in the street. You win!\n", "Cat, while being driven out of its home by someone who can no longer provide for it, turns and mauls the human with claws of fury before finding a better home elsewhere. You lose!\n"]
             computer_action_human_vs_cat = random.choice(cat_win_or_lose_actions)
             print(computer_action_human_vs_cat)
         elif computer_action == "wolf":
-            wolf_win_or_lose_actions = ["Human retracts laws against indiscriminatory hunting of wolves. Wolves go extinct and species that require a keystone species destroy the ecosystem. You lose!\n", "Human attempts to hunt a wolf and instead meets the whole pack. The human is out of ammo. You win!\n"]
+            wolf_win_or_lose_actions = ["Human retracts laws against indiscriminatory hunting of wolves. Wolves go extinct and species that require a keystone species destroy the ecosystem. You win!\n", "Human attempts to hunt a wolf and instead meets the whole pack. The human is out of ammo. You lose!\n"]
             computer_action_human_vs_wolf = random.choice(wolf_win_or_lose_actions)
             print(computer_action_human_vs_wolf)
         else:
-            bee_win_or_lose_actions = ["Bee does a little dance that rallies the masses to attack the human. You win!\n", "Human makes a movie about the bee that makes everyone assume it likes Jazz. It hears 'Ya like jazz?' for the remainder of its life. You lose!\n"]
+            bee_win_or_lose_actions = ["Bee does a little dance that rallies the masses to attack the human. You lose!\n", "Human makes a movie about the bee that makes everyone assume it likes Jazz. It hears 'Ya like jazz?' for the remainder of its life. You win!\n"]
             computer_action_human_vs_bee = random.choice(bee_win_or_lose_actions)
             print(computer_action_human_vs_bee)
 
