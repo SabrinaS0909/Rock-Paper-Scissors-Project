@@ -1,21 +1,8 @@
 """This is a small project of my own take on a game of Rock, Paper, Scissors"""
 
+#we need to add in one more animal, because making the human a wild card has made the guaranteed wins vs loses uneven
+
 import random
-
-"""So, this is where I want to decide how to implement my own twist on a very classic game.
-I can choose the same gameplay just with my own name for everything, but I feel that would be boring.
-Can I implement at least one more twist on things. To the mechanics, maybe.
-We can add more objects, for example if we have rock, paper scissors, then we can add in more objects that interact with the current objects in meaningful ways. Let's aim for two of these.
-Then, maybe, we could add in some sort of wildcard. A new mechanic. Maybe a tie breaker, even. Maybe if two choose the same object initially, it decends into a secondary game. And maybe even from there a thrid or fourth if the luck were so.
-So we've gotta choose something large, then scope in at least four times.
-I'm thinking three creatures, then three elements, then going into composition of their matter (solid, gas and liquid), then from there... hmm.
-Then, lastly, neutron, proton and electrons feels like the most obvious place to go from there. 
-Another factor could be age. That could be a more simple dynamic, that plays better with what common people are down to deal with."""
-
-"""Now to keep mistakes from happening, I need to change the objects to my own and maintain, rather than putting in rock, paper and scissors and potentially missing replacing one.
-I think the animal that is the "weakest" but can also take out the strongest should be a bee.
-So bee = paper, then raven eats the bee and is therefore scissors, then maybe a cat - then because I want to extend it out a little bit, let's add two more animals and see if it overcomplicated the coding process.
-Maybe wolf, then human. But the human can get stung by the bee and therefore loses to the bee."""
 
 while True:
     player_action = input("Enter your animal of choice: bee, corvid, cat, wolf, human\n")
@@ -36,7 +23,7 @@ while True:
         elif computer_action == "wolf":
             print("Wolf gets stung in the muzz and looks silly the rest of the day. You win!\n")
         else:
-            humanandbee_win_or_lose_actions = ["Human is allergic to the bee and is hospitalized. You win!\n", "bee lose situation\n"]
+            humanandbee_win_or_lose_actions = ["Human is allergic to the bee and is hospitalized. You win!\n", "Human smacks the bee with a newspaper, crushing it immediately. You lose!\n"]
             computer_action_bee_vs_human = random.choice(humanandbee_win_or_lose_actions)
             print(computer_action_bee_vs_human)
     elif player_action == "corvid":
@@ -47,7 +34,7 @@ while True:
         elif computer_action == "wolf":
             print("Wolf befriends the corvid and they hunt prey together, you win!\n")
         else:
-            humanandcorvid_win_or_lose_actions = ["Human destroys the corvid's natural habitat and it's forced to live in the city. You lose!\n", "corvid win situation\n"]
+            humanandcorvid_win_or_lose_actions = ["Human destroys the corvid's natural habitat and it's forced to live in the city. You lose!\n", "Human enters the world of Alfred Hitchcock's *The Birds* and has their eyes pecked out by a crazed corvid. You win!\n"]
             computer_action_corvid_vs_human = random.choice(humanandcorvid_win_or_lose_actions)
             print(computer_action_corvid_vs_human)
     elif player_action == "cat":
@@ -58,7 +45,7 @@ while True:
         elif computer_action == "wolf":
             print("Wolf steals the cat wandering it's territory for dinner. You lose!\n")
         else:
-            humanandcat_win_or_lose_actions = ["Human domesticates the cat and makes it wear silly hats and posts pictures of the embarassing situation all over the internet. You lose!\n", "cat win situation\n"]
+            humanandcat_win_or_lose_actions = ["Human domesticates the cat and makes it wear silly hats and posts pictures of the embarassing situation all over the internet. You lose!\n", "Human is infected with toxoplasmosis and becomes a slave to the cat. You win!\n"]
             computer_action_cat_vs_human = random.choice(humanandcat_win_or_lose_actions)
             print(computer_action_cat_vs_human)
     elif player_action == "wolf":
@@ -69,7 +56,7 @@ while True:
         elif computer_action == "bee":
             print("Bee stings the wolf in the muzz and it looks silly the rest of the day. You lose!\n")
         else:
-            humanandwolf_win_or_lose_actions = ["Human tests the wolf's boundaries with a meat-suit and gets mauled. You win!\n", "wolf lose situation\n"]
+            humanandwolf_win_or_lose_actions = ["Human tests the wolf's boundaries with a meat-suit and gets mauled. You win!\n", "Human confuses coyotes killing their livestock for wolves and goes on a mass hunting spree. You lose!\n"]
             computer_action_wolf_vs_human = random.choice(humanandwolf_win_or_lose_actions)
             print(computer_action_wolf_vs_human)
     elif player_action == "human":
