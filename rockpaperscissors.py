@@ -1,14 +1,18 @@
 """This is a small project of my own take on a game of Rock, Paper, Scissors"""
 
-#need to make sure that it stays consistent when an animal wins or loses. Cat shouldn't lose vs corvid in some situations and win in others, it's not a wild card, for example. Change dialogue as needed.
-#I want to have each scenario be unique though, when a wolf wins against the cat I want the scenario to be creatively different for when the cat loses against the wolf
+# I want to have each scenario be unique though, when a wolf wins against the cat I want the scenario to be creatively different for when the cat loses against the wolf
+
 import random
 
 while True:
     player_action = input("\nEnter your animal of choice: bee, bun, corvid, cat, wolf, human\n")
-    #when we put css in, I would like to add pictures of the animals of choice that the player can choose from. Maybe even randomize the photo shown each playthrough.
+    # when we put css in, I would like to add pictures of the animals of choice that the player can choose from. Maybe even randomize the photo shown each playthrough.
     possible_actions = ["bee", "bun", "corvid", "cat", "wolf", "human"]
     computer_action = random.choice(possible_actions)
+
+    # I like these:
+    #... sensitive ears pick up the cautionary buzz of the bee and is terrified into running back home. You win!
+    #... gets stung in the muzz and looks silly the rest of the day. You win!
 
     print(f"\nIt's {player_action} vs {computer_action}.\n")
 
@@ -17,26 +21,26 @@ while True:
         print(f"Both players selected {player_action}. It's a tie!! ... for now.\n") #change the dialogue here once you add in the additional mechanics
     elif player_action == "bee":
         if computer_action == "bun":
-            print("Buns sensitive ears pick up the cautionary buzz of the bee and is terrified into running back home. You win!\n")
+            print("... You lose!\n") # needs dialogue added
         elif computer_action == "corvid":
             print("Corvid eats the bee. You lose!\n")
         elif computer_action == "cat":
-            print("Cat paws the bee to death. You lose!\n")
+            print("... You win!\n") # needs dialogue added
         elif computer_action == "wolf":
-            print("Wolf gets stung in the muzz and looks silly the rest of the day. You win!\n")
+            print("... You win!\n") # needs dialogue added
         else:
             humanandbee_win_or_lose_actions = ["Human is allergic to the bee and is hospitalized. You win!\n", "Human smacks the bee with a newspaper, crushing it immediately. You lose!\n"]
             computer_action_bee_vs_human = random.choice(humanandbee_win_or_lose_actions)
             print(computer_action_bee_vs_human)
     elif player_action == "bun":
         if computer_action == "bee":
-            print("You lose!\n") #needs dialogue added
+            print("You win!\n") #needs dialogue added
         elif computer_action == "corvid":
-            print("You win!\n") #needs dialogue added
-        elif computer_action == "cat":
-            print("You win!\n") #needs dialogue added
-        elif computer_action == "wolf":
             print("You lose!\n") #needs dialogue added
+        elif computer_action == "cat":
+            print("You lose!\n") #needs dialogue added
+        elif computer_action == "wolf":
+            print("You win!\n") #needs dialogue added
         else:
             humanandbun_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue added
             computer_action_bun_vs_human = random.choice(humanandbun_win_or_lose_actions)
@@ -45,20 +49,20 @@ while True:
         if computer_action == "bee":
             print("Bee is eaten by the corvid! You win!\n")
         elif computer_action == "bun":
-            print("You ...!\n") #needs dialogue added
+            print("You win!\n") #needs dialogue added
         elif computer_action == "cat":
-            print("Cat stalks and kills the corvid, you lose!\n")
+            print("Cat stalks and kills the corvid. You lose!\n")
         elif computer_action == "wolf":
-            print("Wolf befriends the corvid and they hunt prey together, you win!\n")
+            print("You lose!\n") #needs dialogue added
         else:
             humanandcorvid_win_or_lose_actions = ["Human destroys the corvid's natural habitat and it's forced to live in the city. You lose!\n", "Human enters the world of Alfred Hitchcock's *The Birds* and has their eyes pecked out by a crazed corvid. You win!\n"]
             computer_action_corvid_vs_human = random.choice(humanandcorvid_win_or_lose_actions)
             print(computer_action_corvid_vs_human)
     elif player_action == "cat":
         if computer_action == "bee":
-            print("Bee gets pawed to death by the cat! You win!\n")
+            print("You lose!\n") #needs dialogue added
         elif computer_action == "bun":
-            print("You ...!\n") #needs dialogue added
+            print("You win!\n") #needs dialogue added
         elif computer_action == "corvid":
             print("Corvid is stalked and killed by the highly invasive cat. You win!\n")
         elif computer_action == "wolf":
@@ -71,7 +75,7 @@ while True:
         if computer_action == "bee":
             print("Bee stings the wolf in the muzz and it looks silly the rest of the day. You lose!\n")
         elif computer_action == "bun":
-            print("You ...!\n") #needs dialogue added
+            print("You lose!\n") #needs dialogue added
         elif computer_action == "corvid":
             print("Corvid befriends the wolf and alerts it to prey for both to enjoy. You win!\n")
         elif computer_action == "cat":
