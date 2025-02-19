@@ -108,7 +108,15 @@ while True:
         print("Wait... what? Please check your spelling, capitalization, and make sure you're choosing an animal from the list of options. \n")
         #I think there is a way to make it so your spelling and capitalization matters less, but lets go with this for now
             
-    play_again = input("Play again? (y/n): ") #need to make sure that if you put anything besides a "y" or "n" here, that it doesn't terminate the program - which it currently does
+#still working on this
+    play_again = input("Play again? (y/n): ")
+
+    while play_again != "y" or "n":
+            print ("I'm sorry. I don't understand.")
+            input("Play again? (y/n): ")
+            if play_again == "y" or "n":
+                break
+
+     
     if play_again.lower() != "y":
         break
-
