@@ -12,7 +12,6 @@ while True:
 
     # I like these:
     #... sensitive ears pick up the cautionary buzz of the bee and is terrified into running back home. You win!
-    #... gets stung in the muzz and looks silly the rest of the day. You win!
 
     print(f"\nIt's {player_action} vs {computer_action}.\n")
 
@@ -21,48 +20,48 @@ while True:
         print(f"Both players selected {player_action}. It's a tie!! ... for now.\n") #change the dialogue here once you add in the additional mechanics
     elif player_action == "bee":
         if computer_action == "bun":
-            print("... You lose!\n") # needs dialogue added
+            print("In a battle for territory where the prize is land full of flowers which are great for hiding from predators, as wells as siphoning nectar, the bun calls in reinforcements and quickly there are too many to drive off with stings and pheramones. The buns claim the meadow of flowers. You lose!\n")
         elif computer_action == "corvid":
             print("Corvid eats the bee. You lose!\n")
         elif computer_action == "cat":
-            print("... You win!\n") # needs dialogue added
+            print("Despite a well calculated swat, the bee outmanuervers the cat and manages to sting it right in the offending paw, sending the cat running. You win!\n")
         elif computer_action == "wolf":
-            print("... You win!\n") # needs dialogue added
+            print("The wolf gets stung in the muzz and looks silly the rest of the day. You win!\n")
         else:
             humanandbee_win_or_lose_actions = ["Human is allergic to the bee and is hospitalized. You win!\n", "Human smacks the bee with a newspaper, crushing it immediately. You lose!\n"]
             computer_action_bee_vs_human = random.choice(humanandbee_win_or_lose_actions)
             print(computer_action_bee_vs_human)
     elif player_action == "bun":
         if computer_action == "bee":
-            print("You win!\n") #needs dialogue added
+            print("Despite inhabiting the same garden, the bun's ability to sneak allows it to be overlooked while the human notices the constant buzzing of the bee's hive and has the colony removed. This allows the bun a distraction that leads to the success of its family. You win!\n")
         elif computer_action == "corvid":
-            print("You lose!\n") #needs dialogue added
+            print("The corvid sees the bun outside of their den and alerts its presence to nearby wolves. The bun is hunted and both enjoy the meal. You lose!\n")
         elif computer_action == "cat":
-            print("You lose!\n") #needs dialogue added
+            print("The cat, brought in as pest control, drives the bun and its family from the garden it lived in from birth. You lose!\n")
         elif computer_action == "wolf":
-            print("You win!\n") #needs dialogue added
+            print("The wolf takes chase to the bun, but the bun is too fast and makes it back to the den before it can be claimed as dinner. The wolf must go hungry this time. You win!\n")
         else:
-            humanandbun_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue added
+            humanandbun_win_or_lose_actions = ["The human unknowingly plants a garden of lettuce and tomatoes ontop of an underground bunny tunnel system, allowing them easy access to the human's produce within months while being difficult to find and exterminate. You win!\n", "The human lays traps that ensnare the bun and its kin. You lose!\n"]
             computer_action_bun_vs_human = random.choice(humanandbun_win_or_lose_actions)
             print(computer_action_bun_vs_human)
     elif player_action == "corvid":
         if computer_action == "bee":
             print("Bee is eaten by the corvid! You win!\n")
         elif computer_action == "bun":
-            print("You win!\n") #needs dialogue added
+            print("The bun, while trying to cross the street, is spooked when the corvid swipes down at it, causing it to backtrack and get hit by a car. The corvid can now feed on the roadkill. You win!\n")
         elif computer_action == "cat":
             print("Cat stalks and kills the corvid. You lose!\n")
         elif computer_action == "wolf":
-            print("You lose!\n") #needs dialogue added
+            print("The wolf, after making a kill, reacts aggressively to the corvid which came down to try and scavange with the pack. The corvid becomes an appetizer to the meal. You lose!\n")
         else:
             humanandcorvid_win_or_lose_actions = ["Human destroys the corvid's natural habitat and it's forced to live in the city. You lose!\n", "Human enters the world of Alfred Hitchcock's *The Birds* and has their eyes pecked out by a crazed corvid. You win!\n"]
             computer_action_corvid_vs_human = random.choice(humanandcorvid_win_or_lose_actions)
             print(computer_action_corvid_vs_human)
     elif player_action == "cat":
         if computer_action == "bee":
-            print("You lose!\n") #needs dialogue added
+            print("Bee becomes aggitated when the cat decides to climb a tree that inhabits their home. When the cat steps on the hive to aid its ascent, the bee sends out the pheramones necessary to protect the hive. The cat flees quickly. You lose!\n")
         elif computer_action == "bun":
-            print("You win!\n") #needs dialogue added
+            print("Bun tests its luck and explores a yard that is highly protected by the cat. The cat makes simple work of the curious bun. You win!\n")
         elif computer_action == "corvid":
             print("Corvid is stalked and killed by the highly invasive cat. You win!\n")
         elif computer_action == "wolf":
@@ -75,7 +74,7 @@ while True:
         if computer_action == "bee":
             print("Bee stings the wolf in the muzz and it looks silly the rest of the day. You lose!\n")
         elif computer_action == "bun":
-            print("You lose!\n") #needs dialogue added
+            print("Bun, while being chased by the wolf, leads it directly into the pathway of hunters before disappearing beneath the ground. The wolf must now outrun gunfire, as the wolf is no longer protected by a status of being endangered. You lose!\n")
         elif computer_action == "corvid":
             print("Corvid befriends the wolf and alerts it to prey for both to enjoy. You win!\n")
         elif computer_action == "cat":
@@ -90,7 +89,7 @@ while True:
             computer_action_human_vs_bee = random.choice(bee_win_or_lose_actions)
             print(computer_action_human_vs_bee)
         elif computer_action == "bun":
-            bun_win_or_lose_actions = ["You lose!\n", "You win!\n"] #need dialogue
+            bun_win_or_lose_actions = ["Bun, and its family, enjoys a very large meal which, to the human's dismay, turns out to be their crop yeild for the season. You lose!\n", "Bun foregoes it's usual choice of lettuce, and other mediocre looking vegetables, for some unusually juicy and delicious looking tomatoes. Turns out the reason they looked so good was because of DDT. The bun is poisoned and no longer bothers any of the crops. You win!\n"]
             computer_action_human_vs_bun = random.choice(bun_win_or_lose_actions)
             print(computer_action_human_vs_bun)
         elif computer_action == "corvid":
