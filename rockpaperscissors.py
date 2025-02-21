@@ -1,7 +1,5 @@
 """This is a small project of my own take on a game of Rock, Paper, Scissors"""
 
-# I want to have each scenario be unique though, when a wolf wins against the cat I want the scenario to be creatively different for when the cat loses against the wolf
-
 import random
 
 while True:
@@ -108,15 +106,18 @@ while True:
         print("Wait... what? Please check your spelling, capitalization, and make sure you're choosing an animal from the list of options. \n")
         #I think there is a way to make it so your spelling and capitalization matters less, but lets go with this for now
             
-#still working on this
-    play_again = input("Play again? (y/n): ")
+    while True:
+        play_again = input("Play again? (y/n): ")    
+        if play_again == "y":
+            print ("\nRestarting...")
+            break
+        elif play_again == "n":
+            print ("\nQuitting...\n")
+            break
+        elif play_again != "y":
+            print ("\nI'm sorry. I don't understand. Please enter a lowercase y for Yes or a lowercase n for No.\n")
+        elif play_again != "n":
+            print ("\nI'm sorry. I don't understand. Please enter a lowercase y for Yes or a lowercase n for No.\n")
 
-    while play_again != "y" or "n":
-            print ("I'm sorry. I don't understand.")
-            input("Play again? (y/n): ")
-            if play_again == "y" or "n":
-                break
-
-     
-    if play_again.lower() != "y":
+    if play_again == "n":
         break
