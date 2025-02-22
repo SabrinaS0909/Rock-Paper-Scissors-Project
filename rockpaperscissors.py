@@ -14,8 +14,14 @@ while True:
     print(f"\nIt's {player_action} vs {computer_action}.\n")
 
     if player_action == computer_action:
-        #This one is where the differentiating mechanics come in. And the game goes deeper.
-        print(f"Both players selected {player_action}. It's a tie!! ... for now.\n") #change the dialogue here once you add in the additional mechanics
+        print("It's a tie! Looks like being basic animals isn't enough for you two. It's time to adopt a... 'special' quality to apply to your animal of choice.\n")
+        
+        player_action_element = input("Choose a basic element: water, fire, earth, or air\n")
+        possible_element_actions = ["water", "fire", "earth", "air"]
+        computer_action_element = random.choice(possible_element_actions)
+        
+        print(f"\nIt's a {player_action_element} {player_action} vs {computer_action_element} {computer_action}.")
+
     elif player_action == "bee":
         if computer_action == "bun":
             print("In a battle for territory where the prize is land full of flowers which are great for hiding from predators, as wells as siphoning nectar, the bun calls in reinforcements and quickly there are too many to drive off with stings and pheramones. The buns claim the meadow of flowers. You lose!\n")
