@@ -20,8 +20,39 @@ while True:
         possible_element_actions = ["water", "fire", "earth", "air"]
         computer_action_element = random.choice(possible_element_actions)
         
-        print(f"\nIt's a {player_action_element} {player_action} vs {computer_action_element} {computer_action}.")
-
+        print(f"\nIt's {player_action_element} {player_action} vs {computer_action_element} {computer_action}.")
+        #do we want to have each animal variant have it's own dialogue or use f statements?
+        #do we want an animal + element = something like "fire bee" or animal + element = something like "wasp"?
+        if player_action_element == computer_action_element:
+            print("Another tie?? Jeez, well then, I suppose both of you win... for now. >_>") #go in depth again
+        if player_action_element == "water":
+            if computer_action_element == "fire":
+                print("Water wins!") #needs dialogue
+            elif computer_action_element == "earth":
+                print("Water loses!") #needs dialogue
+            else:
+                #air is a wild card
+        elif player_action_element == "fire":
+            if computer_action_element == "water":
+                print("Fire loses!") #needs dialogue
+            elif computer_action_element == "earth":
+                print("Fire wins!") #needs dialogue
+            else:
+                #air is a wild card
+        elif player_action_element == "earth":
+            if computer_action_element == "water":
+                print("Earth wins!") #needs dialogue
+            elif computer_action_element == "fire":
+                print("Earth loses!") #needs dialogue
+            else:
+                #air is a wild card
+        else:
+            if computer_action_element == "water":
+                #air is a wild card
+            elif computer_action_element == "fire":
+                #air is a wild card
+            else:
+                #this will be ground vs air
     elif player_action == "bee":
         if computer_action == "bun":
             print("In a battle for territory where the prize is land full of flowers which are great for hiding from predators, as wells as siphoning nectar, the bun calls in reinforcements and quickly there are too many to drive off with stings and pheramones. The buns claim the meadow of flowers. You lose!\n")
