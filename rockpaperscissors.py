@@ -13,60 +13,103 @@ while True:
 
     print(f"\nIt's {player_action} vs {computer_action}.\n")
 
-    if player_action == computer_action:
+    def element_battle(water_vs_fire,
+                   water_vs_earth,
+                   water_vs_air_win,
+                   water_vs_air_lose,
+                   fire_vs_water,
+                   fire_vs_earth,
+                   fire_vs_air_win,
+                   fire_vs_air_lose,
+                   earth_vs_water,
+                   earth_vs_fire,
+                   earth_vs_air_win,
+                   earth_vs_air_lose,
+                   air_vs_water_win,
+                   air_vs_water_lose,
+                   air_vs_fire_win,
+                   air_vs_fire_lose,
+                   air_vs_earth_win,
+                   air_vs_earth_lose
+                   ):
         print("It's a tie! Looks like being basic animals isn't enough for you two. It's time to adopt a... 'special' quality to apply to your animal of choice.\n")
         
         player_action_element = input("Choose a basic element: water, fire, earth, or air\n")
         possible_element_actions = ["water", "fire", "earth", "air"]
         computer_action_element = random.choice(possible_element_actions)
+
+    
         
         print(f"\nIt's {player_action_element} {player_action} vs {computer_action_element} {computer_action}.")
-        #do we want to have each animal variant have it's own dialogue or use f statements?
+
         #do we want an animal + element = something like "fire bee" or animal + element = something like "wasp"?
+        #how will we change a bee + fire into a wasp in the dialogue?
+        #be aware that this change will probably need to be made outside of this function
+
         if player_action_element == computer_action_element:
             print("Another tie?? Jeez, well then, I suppose both of you win... for now. >_>") #go in depth again
         if player_action_element == "water":
             if computer_action_element == "fire":
-                print("Water wins!") #needs dialogue
+                print(water_vs_fire) #needs dialogue that will be fleshed out above in the parameters of the function
             elif computer_action_element == "earth":
-                print("Water loses!") #needs dialogue
+                print(water_vs_earth) #needs dialogue
             else:
-                waterair_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                waterair_win_or_lose_actions = [water_vs_air_win, water_vs_air_lose] #needs dialogue
                 computer_action_water_vs_air = random.choice(waterair_win_or_lose_actions)
                 print(computer_action_water_vs_air)
         elif player_action_element == "fire":
             if computer_action_element == "water":
-                print("Fire loses!") #needs dialogue
+                print(fire_vs_water) #needs dialogue
             elif computer_action_element == "earth":
-                print("Fire wins!") #needs dialogue
+                print(fire_vs_earth) #needs dialogue
             else:
-                fireair_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                fireair_win_or_lose_actions = [fire_vs_air_win, fire_vs_air_lose] #needs dialogue
                 computer_action_fire_vs_air = random.choice(fireair_win_or_lose_actions)
                 print(computer_action_fire_vs_air)
         elif player_action_element == "earth":
             if computer_action_element == "water":
-                print("Earth wins!") #needs dialogue
+                print(earth_vs_water) #needs dialogue
             elif computer_action_element == "fire":
-                print("Earth loses!") #needs dialogue
+                print(earth_vs_fire) #needs dialogue
             else:
-                earthair_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                earthair_win_or_lose_actions = [earth_vs_air_win, earth_vs_air_lose] #needs dialogue
                 computer_action_earth_vs_air = random.choice(earthair_win_or_lose_actions)
                 print(computer_action_earth_vs_air)
         else:
             if computer_action_element == "water":
-                water_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                water_win_or_lose_actions = [air_vs_water_win, air_vs_water_lose] #needs dialogue
                 computer_action_air_vs_water = random.choice(water_win_or_lose_actions)
                 print(computer_action_air_vs_water)
             elif computer_action_element == "fire":
-                fire_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                fire_win_or_lose_actions = [air_vs_fire_win, air_vs_fire_lose] #needs dialogue
                 computer_action_air_vs_fire = random.choice(fire_win_or_lose_actions)
                 print(computer_action_air_vs_fire)
             else:
-                earth_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                earth_win_or_lose_actions = [air_vs_earth_win, air_vs_earth_lose] #needs dialogue
                 computer_action_air_vs_earth = random.choice(earth_win_or_lose_actions)
                 print(computer_action_air_vs_earth)
-    elif player_action == "bee":
-        if computer_action == "bun":
+
+    if player_action == "bee":
+        if computer_action == "bee":
+            element_battle("water bee beats fire bee",
+                       "water bee loses to ground bee",
+                       "water bee beats air bee",
+                       "water bee loses to air  bee",
+                       "fire bee loses to water bee",
+                       "fire bee beats earth bee",
+                       "fire bee beats air bee",
+                       "fire bee loses to air bee",
+                       "earth bee beats water bee",
+                       "earth bee loses to fire bee",
+                       "earth bee beats air bee",
+                       "earth bee loses to air bee",
+                       "air bee beats water bee",
+                       "air bee loses to water bee",
+                       "air bee beats fire bee",
+                       "air bee loses to fire bee",
+                       "air bee beats earth bee",
+                       "air bee loses to earth bee")
+        elif computer_action == "bun":
             print("In a battle for territory where the prize is land full of flowers which are great for hiding from predators, as wells as siphoning nectar, the bun calls in reinforcements and quickly there are too many to drive off with stings and pheramones. The buns claim the meadow of flowers. You lose!\n")
         elif computer_action == "corvid":
             print("Corvid eats the bee. You lose!\n")
@@ -81,6 +124,25 @@ while True:
     elif player_action == "bun":
         if computer_action == "bee":
             print("Despite inhabiting the same garden, the bun's ability to sneak allows it to be overlooked while the human notices the constant buzzing of the bee's hive and has the colony removed. This allows the bun a distraction that leads to the success of its family. You win!\n")
+        elif computer_action == "bun":
+            element_battle("water bun beats fire bun",
+                       "water bun loses to ground bun",
+                       "water bun beats air bun",
+                       "water bun loses to air  bun",
+                       "fire bun loses to water bun",
+                       "fire bun beats earth bun",
+                       "fire bun beats air bun",
+                       "fire bun loses to air bun",
+                       "earth bun beats water bun",
+                       "earth bun loses to fire bun",
+                       "earth bun beats air bun",
+                       "earth bun loses to air bun",
+                       "air bun beats water bun",
+                       "air bun loses to water bun",
+                       "air bun beats fire bun",
+                       "air bun loses to fire bun",
+                       "air bun beats earth bun",
+                       "air bun loses to earth bun")
         elif computer_action == "corvid":
             print("The corvid sees the bun outside of their den and alerts its presence to nearby wolves. The bun is hunted and both enjoy the meal. You lose!\n")
         elif computer_action == "cat":
@@ -96,6 +158,25 @@ while True:
             print("Bee is eaten by the corvid! You win!\n")
         elif computer_action == "bun":
             print("The bun, while trying to cross the street, is spooked when the corvid swipes down at it, causing it to backtrack and get hit by a car. The corvid can now feed on the roadkill. You win!\n")
+        elif computer_action == "corvid":
+            element_battle("water corvid beats fire corvid",
+                       "water corvid loses to ground corvid",
+                       "water corvid beats air corvid",
+                       "water corvid loses to air corvid",
+                       "fire corvid loses to water corvid",
+                       "fire corvid beats earth corvid",
+                       "fire corvid beats air corvid",
+                       "fire corvid loses to air corvid",
+                       "earth corvid beats water corvid",
+                       "earth corvid loses to fire corvid",
+                       "earth corvid beats air corvid",
+                       "earth corvid loses to air corvid", #why does this pop up after a tie between earth corvid vs earth corvid?
+                       "air corvid beats water corvid",
+                       "air corvid loses to water corvid",
+                       "air corvid beats fire corvid",
+                       "air corvid loses to fire corvid",
+                       "air corvid beats earth corvid",
+                       "air corvid loses to earth corvid")
         elif computer_action == "cat":
             print("Cat stalks and kills the corvid. You lose!\n")
         elif computer_action == "wolf":
@@ -111,6 +192,25 @@ while True:
             print("Bun tests its luck and explores a yard that is highly protected by the cat. The cat makes simple work of the curious bun. You win!\n")
         elif computer_action == "corvid":
             print("Corvid is stalked and killed by the highly invasive cat. You win!\n")
+        elif computer_action == "cat":
+            element_battle("water cat beats fire cat",
+                       "water cat loses to ground cat",
+                       "water cat beats air cat",
+                       "water cat loses to air  cat",
+                       "fire cat loses to water cat",
+                       "fire cat beats earth cat",
+                       "fire cat beats air cat",
+                       "fire cat loses to air cat",
+                       "earth cat beats water cat",
+                       "earth be loses to fire cat",
+                       "earth cat beats air cat",
+                       "earth cat loses to air cat",
+                       "air cat beats water cat",
+                       "air cat loses to water cat",
+                       "air cat beats fire cat",
+                       "air cat loses to fire cat",
+                       "air cat beats earth cat",
+                       "air cat loses to earth cat")
         elif computer_action == "wolf":
             print("Wolf steals the cat wandering it's territory for dinner. You lose!\n")
         else:
@@ -126,6 +226,25 @@ while True:
             print("Corvid befriends the wolf and alerts it to prey for both to enjoy. You win!\n")
         elif computer_action == "cat":
             print("Cat navigates the forest and is stolen by the wolf for dinner. You win!\n")
+        elif computer_action == "wolf":
+            element_battle("water wolf beats fire wolf",
+                       "water wolf loses to ground wolf",
+                       "water wolf beats air wolf",
+                       "water wolf loses to air  wolf",
+                       "fire wolf loses to water wolf",
+                       "fire wolf beats earth wolf",
+                       "fire wolf beats air wolf",
+                       "fire wolf loses to air wolf",
+                       "earth wolf beats water wolf",
+                       "earth be loses to fire wolf",
+                       "earth wolf beats air wolf",
+                       "earth wolf loses to air wolf",
+                       "air wolf beats water wolf",
+                       "air wolf loses to water wolf",
+                       "air wolf beats fire wolf",
+                       "air wolf loses to fire wolf",
+                       "air wolf beats earth wolf",
+                       "air wolf loses to earth wolf")
         else:
             humanandwolf_win_or_lose_actions = ["Human tests the wolf's boundaries with a meat-suit and gets mauled. You win!\n", "Human confuses coyotes killing their livestock for wolves and goes on a mass hunting spree. You lose!\n"]
             computer_action_wolf_vs_human = random.choice(humanandwolf_win_or_lose_actions)
@@ -147,11 +266,14 @@ while True:
             cat_win_or_lose_actions = ["Human adopts the cat and realizes putting forth effort for another individual is too much. The cat is dumped in the street. You win!\n", "Cat, while being driven out of its home by someone who can no longer provide for it, turns and mauls the human with claws of fury before finding a better home elsewhere. You lose!\n"]
             computer_action_human_vs_cat = random.choice(cat_win_or_lose_actions)
             print(computer_action_human_vs_cat)
-        else:
+        elif computer_action == "wolf":
             wolf_win_or_lose_actions = ["Human retracts laws against indiscriminatory hunting of wolves. Wolves go extinct and species that require a keystone species destroy the ecosystem. You win!\n", "Human attempts to hunt a wolf and instead meets the whole pack. The human is out of ammo. You lose!\n"]
             computer_action_human_vs_wolf = random.choice(wolf_win_or_lose_actions)
             print(computer_action_human_vs_wolf)
+        else:
+            print("this is human vs human which are both wild cards, this will be substantially different from the function we've made.") #this point must be accomodated
     else: 
+        #need this to restart the game and not lead to asking to play the game again
         print("Wait... what? Please check your spelling, capitalization, and make sure you're choosing an animal from the list of options. \n")
         #I think there is a way to make it so your spelling and capitalization matters less, but lets go with this for now
             
