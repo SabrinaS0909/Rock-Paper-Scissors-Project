@@ -8,8 +8,8 @@ while True:
     possible_actions = ["bee", "bun", "corvid", "cat", "wolf", "human"]
     computer_action = random.choice(possible_actions)
 
-    # I like these:
-    #... sensitive ears pick up the cautionary buzz of the bee and is terrified into running back home. You win!
+    # make sure there aren't any lazy duplicates with potential dialogues. I want wolf vs cat to have a different scenario than cat vs wolf, even if the winner is the same.
+    # I like this as a dialogue potential: ... sensitive ears pick up the cautionary buzz of the bee and is terrified into running back home. You win!
 
     print(f"\nIt's {player_action} vs {computer_action}.\n")
 
@@ -31,28 +31,40 @@ while True:
             elif computer_action_element == "earth":
                 print("Water loses!") #needs dialogue
             else:
-                #air is a wild card
+                waterair_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                computer_action_water_vs_air = random.choice(waterair_win_or_lose_actions)
+                print(computer_action_water_vs_air)
         elif player_action_element == "fire":
             if computer_action_element == "water":
                 print("Fire loses!") #needs dialogue
             elif computer_action_element == "earth":
                 print("Fire wins!") #needs dialogue
             else:
-                #air is a wild card
+                fireair_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                computer_action_fire_vs_air = random.choice(fireair_win_or_lose_actions)
+                print(computer_action_fire_vs_air)
         elif player_action_element == "earth":
             if computer_action_element == "water":
                 print("Earth wins!") #needs dialogue
             elif computer_action_element == "fire":
                 print("Earth loses!") #needs dialogue
             else:
-                #air is a wild card
+                earthair_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                computer_action_earth_vs_air = random.choice(earthair_win_or_lose_actions)
+                print(computer_action_earth_vs_air)
         else:
             if computer_action_element == "water":
-                #air is a wild card
+                water_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                computer_action_air_vs_water = random.choice(water_win_or_lose_actions)
+                print(computer_action_air_vs_water)
             elif computer_action_element == "fire":
-                #air is a wild card
+                fire_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                computer_action_air_vs_fire = random.choice(fire_win_or_lose_actions)
+                print(computer_action_air_vs_fire)
             else:
-                #this will be ground vs air
+                earth_win_or_lose_actions = ["You win!\n", "You lose!\n"] #needs dialogue
+                computer_action_air_vs_earth = random.choice(earth_win_or_lose_actions)
+                print(computer_action_air_vs_earth)
     elif player_action == "bee":
         if computer_action == "bun":
             print("In a battle for territory where the prize is land full of flowers which are great for hiding from predators, as wells as siphoning nectar, the bun calls in reinforcements and quickly there are too many to drive off with stings and pheramones. The buns claim the meadow of flowers. You lose!\n")
