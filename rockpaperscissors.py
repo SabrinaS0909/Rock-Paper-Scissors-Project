@@ -91,6 +91,11 @@ while True:
 
     if player_action == "bee":
         if computer_action == "bee":
+            #erase below comment once you have everything in order
+            """water bee = Baltic isopod
+               fire bee = wasp
+               earth bee = mud dauber or scorpion
+               air bee = bumble bee"""
             element_battle("water bee beats fire bee",
                        "water bee loses to ground bee",
                        "water bee beats air bee",
@@ -125,6 +130,11 @@ while True:
         if computer_action == "bee":
             print("Despite inhabiting the same garden, the bun's ability to sneak allows it to be overlooked while the human notices the constant buzzing of the bee's hive and has the colony removed. This allows the bun a distraction that leads to the success of its family. You win!\n")
         elif computer_action == "bun":
+            #erase below comment once you have everything in order
+            """water bun = sea bunny
+               fire bun = desert jackrabbit
+               earth bun = Flemish Giant rabbits #might change
+               air bun = Netherland Dwarf Rabbit #might change"""
             element_battle("water bun beats fire bun",
                        "water bun loses to ground bun",
                        "water bun beats air bun",
@@ -159,6 +169,11 @@ while True:
         elif computer_action == "bun":
             print("The bun, while trying to cross the street, is spooked when the corvid swipes down at it, causing it to backtrack and get hit by a car. The corvid can now feed on the roadkill. You win!\n")
         elif computer_action == "corvid":
+            #erase below comment once you have everything in order
+            """water corvid = crow
+               fire corvid = jay
+               earth corvid = raven
+               air corvid = magpie"""
             element_battle("water corvid beats fire corvid",
                        "water corvid loses to ground corvid",
                        "water corvid beats air corvid",
@@ -193,6 +208,11 @@ while True:
         elif computer_action == "corvid":
             print("Corvid is stalked and killed by the highly invasive cat. You win!\n")
         elif computer_action == "cat":
+            #erase below comment once you have everything in order
+            """water cat = jaguar
+               fire cat = tiger
+               earth cat = lion
+               air cat = snow leopard"""
             element_battle("water cat beats fire cat",
                        "water cat loses to ground cat",
                        "water cat beats air cat",
@@ -227,6 +247,11 @@ while True:
         elif computer_action == "cat":
             print("Cat navigates the forest and is stolen by the wolf for dinner. You win!\n")
         elif computer_action == "wolf":
+            #erase below comment once you have everything in order
+            """water wolf = coastal wolf
+               fire wolf = Maine wolf 
+               earth wolf = gray wolf
+               air wolf = arctic wolf"""
             element_battle("water wolf beats fire wolf",
                        "water wolf loses to ground wolf",
                        "water wolf beats air wolf",
