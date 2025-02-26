@@ -216,12 +216,11 @@ while True:
         elif computer_action == "corvid":
             print("Corvid is stalked and killed by the highly invasive cat. You win!\n")
         elif computer_action == "cat":
-            #erase below comment once you have everything in order
-            """water cat = jaguar
-               fire cat = tiger
-               earth cat = lion
-               air cat = snow leopard"""
-            element_battle("water cat beats fire cat",
+            element_battle("jaguar",
+                       "tiger",
+                       "lion",
+                       "snow leopard",
+                       "water cat beats fire cat",
                        "water cat loses to ground cat",
                        "water cat beats air cat",
                        "water cat loses to air  cat",
@@ -255,12 +254,11 @@ while True:
         elif computer_action == "cat":
             print("Cat navigates the forest and is stolen by the wolf for dinner. You win!\n")
         elif computer_action == "wolf":
-            #erase below comment once you have everything in order
-            """water wolf = coastal wolf
-               fire wolf = Maine wolf 
-               earth wolf = gray wolf
-               air wolf = arctic wolf"""
-            element_battle("water wolf beats fire wolf",
+            element_battle("coastal wolf"
+                       "Maine wolf",
+                       "gray wolf",
+                       "arctic wolf",
+                       "water wolf beats fire wolf",
                        "water wolf loses to ground wolf",
                        "water wolf beats air wolf",
                        "water wolf loses to air  wolf",
