@@ -13,7 +13,11 @@ while True:
 
     print(f"\nIt's {player_action} vs {computer_action}.\n")
 
-    def element_battle(water_vs_fire,
+    def element_battle(water_version,
+                   fire_version,
+                   earth_version,
+                   air_version,
+                   water_vs_fire,
                    water_vs_earth,
                    water_vs_air_win,
                    water_vs_air_lose,
@@ -38,13 +42,20 @@ while True:
         possible_element_actions = ["water", "fire", "earth", "air"]
         computer_action_element = random.choice(possible_element_actions)
 
-    
-        
+        if player_action_element == "water":
+            print(f"\nCongrats! You've become... {water_version}!")
+        elif player_action_element == "fire":
+            print(f"\nCongrats! You've become... {fire_version}!")
+        elif player_action_element == "earth":
+            print(f"\nCongrats! You've become... {earth_version}!")
+        else:
+            print(f"\nCongrats! You've become... {air_version}!")
         print(f"\nIt's {player_action_element} {player_action} vs {computer_action_element} {computer_action}.")
 
         #do we want an animal + element = something like "fire bee" or animal + element = something like "wasp"?
         #how will we change a bee + fire into a wasp in the dialogue?
         #be aware that this change will probably need to be made outside of this function
+        #make sure you mention the change in the computer's animal as well
 
         if player_action_element == computer_action_element:
             print("Another tie?? Jeez, well then, I suppose both of you win... for now. >_>") #go in depth again
@@ -91,12 +102,11 @@ while True:
 
     if player_action == "bee":
         if computer_action == "bee":
-            #erase below comment once you have everything in order
-            """water bee = Baltic isopod
-               fire bee = wasp
-               earth bee = mud dauber or scorpion
-               air bee = bumble bee"""
-            element_battle("water bee beats fire bee",
+            element_battle("a Baltic isopod",
+                       "a wasp",
+                       "a mud dauber or scorpion",
+                       "a bumble bee",
+                       "water bee beats fire bee",
                        "water bee loses to ground bee",
                        "water bee beats air bee",
                        "water bee loses to air  bee",
@@ -130,12 +140,11 @@ while True:
         if computer_action == "bee":
             print("Despite inhabiting the same garden, the bun's ability to sneak allows it to be overlooked while the human notices the constant buzzing of the bee's hive and has the colony removed. This allows the bun a distraction that leads to the success of its family. You win!\n")
         elif computer_action == "bun":
-            #erase below comment once you have everything in order
-            """water bun = sea bunny
-               fire bun = desert jackrabbit
-               earth bun = Flemish Giant rabbits #might change
-               air bun = Netherland Dwarf Rabbit #might change"""
-            element_battle("water bun beats fire bun",
+            element_battle("a sea bunny",
+                       "a desert jackrabbit",
+                       "a Flemish giant rabbit", #might change
+                       "a Netherland Dwarf rabbit", #might change
+                       "water bun beats fire bun",
                        "water bun loses to ground bun",
                        "water bun beats air bun",
                        "water bun loses to air  bun",
@@ -169,12 +178,11 @@ while True:
         elif computer_action == "bun":
             print("The bun, while trying to cross the street, is spooked when the corvid swipes down at it, causing it to backtrack and get hit by a car. The corvid can now feed on the roadkill. You win!\n")
         elif computer_action == "corvid":
-            #erase below comment once you have everything in order
-            """water corvid = crow
-               fire corvid = jay
-               earth corvid = raven
-               air corvid = magpie"""
-            element_battle("water corvid beats fire corvid",
+            element_battle("crow",
+                       "jay",
+                       "raven",
+                       "magpie",
+                       "water corvid beats fire corvid",
                        "water corvid loses to ground corvid",
                        "water corvid beats air corvid",
                        "water corvid loses to air corvid",
@@ -299,6 +307,7 @@ while True:
             print("this is human vs human which are both wild cards, this will be substantially different from the function we've made.") #this point must be accomodated
     else: 
         #need this to restart the game and not lead to asking to play the game again
+        #I also need to make sure this statement is said during the elemental battle
         print("Wait... what? Please check your spelling, capitalization, and make sure you're choosing an animal from the list of options. \n")
         #I think there is a way to make it so your spelling and capitalization matters less, but lets go with this for now
             
