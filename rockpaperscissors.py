@@ -52,10 +52,7 @@ while True:
             print(f"\nCongrats! You've become... {air_version}!")
         print(f"\nIt's {player_action_element} {player_action} vs {computer_action_element} {computer_action}.")
 
-        #do we want an animal + element = something like "fire bee" or animal + element = something like "wasp"?
-        #how will we change a bee + fire into a wasp in the dialogue?
-        #be aware that this change will probably need to be made outside of this function
-        #make sure you mention the change in the computer's animal as well
+        #make sure you mention the change in the computer's animal
 
         if player_action_element == computer_action_element:
             print("Another tie?? Jeez, well then, I suppose both of you win... for now. >_>") #go in depth again
@@ -106,10 +103,10 @@ while True:
                        "a wasp",
                        "a mud dauber or scorpion",
                        "a bumble bee",
-                       "water bee beats fire bee",
-                       "water bee loses to ground bee",
-                       "water bee beats air bee",
-                       "water bee loses to air  bee",
+                       "The wasp, as a physical embodiment of anger, sees the Baltic isopod but fails to realize it's under the very clear barrier of water. It dives to attack but is swallowed instead. The Baltic isopod gets to feed on the remains. You win!",
+                       "The Baltic isopod surfaces, wondering if it should join it's more land-dwelling isopodic cousins. But upon the first step, it's snatched up by a nearby hunting scorpion(or mud dauber) and devoured. You lose!",
+                       "The Baltic isopod, so small, versatile and overlooked by humans, escapes the devestating 90% population loss that has overwhelmed bumble bees for the past two decades. But not by much. Still though, you win!",
+                       "Did you know that bumble bee queen larvae can survive for up to a week under water? That's amazing! However, Baltic isopods cannot do the same on land. You lose!",
                        "fire bee loses to water bee",
                        "fire bee beats earth bee",
                        "fire bee beats air bee",
