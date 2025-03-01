@@ -118,8 +118,8 @@ while True:
                        "Although both the bumble bee and the Baltic isopod are a keystone species for their respective biomes, causing the flora in their biomes to flourish because of their existence, it's arguable that without bees - all life would cease to exist. Meanwhile, under the water, Baltic isopods are not so necessary for the life of all living things. You win!",
                        "The bumble bee flies happily towards a water lily, but bounces off of it and lands in the water. The Baltic isopod takes advantage of the situation and, with several others, pulls the bumble further under water so that they all have something to eat. You lose!",
                        "Both the bumble bee and the wasp have their hives slightly disturbed by nearby animals. The bumble bees preserve their alarm and fear, and after a few moments, the threat has passed with no issues. Meanwhile, the wasps react immediately and attack the offender. It turns out the offender is a honey badger, and nothing the wasps do can deter it. Still they try, until exhaustion, allowing the honey badger to find and ravage their home. You win!",
-                       "Both the bumble bee and the wasp are involved in scientific experiments. They are both required to sting something. The wasp lives. You lose!",
-                       "air bee beats earth bee",
+                       "", #Ugh... bumble bees are a bee that can sting more than once...
+                       "The bumble bee, with an intelligence that many overlook, decides to bait the scorpion or mud dauber by acting like a bug that could be preyed on then guiding the opponent towards a known trapdoor spider. The scorpion or mud dauber is made the prey instead. You win!",
                        "air bee loses to earth bee")
         elif computer_action == "bun":
             print("In a battle for territory where the prize is land full of flowers which are great for hiding from predators, as wells as siphoning nectar, the bun calls in reinforcements and quickly there are too many to drive off with stings and pheramones. The buns claim the meadow of flowers. You lose!\n")
