@@ -1,0 +1,20 @@
+#Testing grounds, for the hard stuffs
+
+        element_battle("water wolf beats fire wolf",
+                       "water wolf loses to ground wolf",
+                       "water wolf beats air wolf",
+                       "water wolf loses to air  wolf",
+                       "fire wolf loses to water wolf",
+                       "fire wolf beats earth wolf",
+                       "fire wolf beats air wolf",
+                       "fire wolf loses to air wolf",
+                       "earth wolf beats water wolf",
+                       "earth be loses to fire wolf",
+                       "earth wolf beats air wolf",
+                       "earth wolf loses to air wolf",
+                       "air wolf beats water wolf",
+                       "air wolf loses to water wolf",
+                       "air wolf beats fire wolf",
+                       "air wolf loses to fire wolf",
+                       "air wolf beats earth wolf",
+                       "air wolf loses to earth wolf")
