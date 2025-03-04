@@ -217,7 +217,7 @@ while True:
                        "tiger",
                        "lion",
                        "snow leopard",
-                       "water cat beats fire cat",
+                       "The jaguar uses it's incredible climbing prowess to reach the tops of the trees where it can watch for it's opponent. Once the tiger comes into view, it pounces down before it can be seen and clamps its jaws around the spine of the tiger, crunching it with ease. You win!",
                        "water cat loses to ground cat",
                        "water cat beats air cat",
                        "water cat loses to air  cat",
