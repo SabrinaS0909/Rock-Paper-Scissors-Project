@@ -44,15 +44,31 @@ while True:
 
         if player_action_element == "water":
             print(f"\nCongrats! You've become... {water_version}!")
+            player_action = water_version
         elif player_action_element == "fire":
             print(f"\nCongrats! You've become... {fire_version}!")
+            player_action = fire_version
         elif player_action_element == "earth":
             print(f"\nCongrats! You've become... {earth_version}!")
+            player_action = earth_version
         else:
             print(f"\nCongrats! You've become... {air_version}!")
-        print(f"\nIt's {player_action_element} {player_action} vs {computer_action_element} {computer_action}.")
+            player_action = air_version
 
-        #make sure you mention the change in the computer's animal
+        if computer_action_element == "water":
+            print(f"\nAnd your opponent has become... {water_version}!")
+            computer_action = water_version
+        elif computer_action_element == "fire":
+            print(f"\nAnd your opponent has become... {fire_version}!")
+            computer_action = fire_version
+        elif computer_action_element == "earth":
+            print(f"\nAnd your opponent has become... {earth_version}!")
+            computer_action = earth_version
+        else:
+            print(f"\nAnd your opponent has become... {air_version}!")
+            computer_action = air_version
+
+        print(f"\nIt's {player_action} vs {computer_action}.\n")
 
         if player_action_element == computer_action_element:
             print("Another tie?? Jeez, well then, I suppose both of you win... for now. >_>") #go in depth again

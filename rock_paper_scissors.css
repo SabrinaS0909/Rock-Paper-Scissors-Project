@@ -2,7 +2,7 @@ body{
     background-color: #90EE90;
     font-family: perpetua, Helvetica, serif; 
     text-align: center;
-    margin-top: 5em;
+    margin-top: 2.5em;
  }
 
 img{
@@ -26,9 +26,12 @@ footer{
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-   margin-bottom: 15em;
  }
 
 .animal {
-   margin: .25em;
+   margin: 1em;
+ }
+
+ .human {
+   margin-top: 5em;
  }
