@@ -2,7 +2,11 @@
 
 import random
 
-while True:
+start = True
+restart = True
+
+while start:
+    restart = True
     player_action = input("\nEnter your animal of choice: bee, bun, corvid, cat, wolf, human\n")
     # when we put css in, I would like to add pictures of the animals of choice that the player can choose from. Maybe even randomize the photo shown each playthrough.
     possible_actions = ["bee", "bun", "corvid", "cat", "wolf", "human"]
@@ -317,13 +321,14 @@ while True:
         else:
             print("this is human vs human which are both wild cards, this will be substantially different from the function we've made.") #this point must be accomodated
     else: 
-        #need this to restart the game and not lead to asking to play the game again
         #I also need to make sure this statement is said during the elemental battle
         print("Wait... what? Please check your spelling, capitalization, and make sure you're choosing an animal from the list of options. \n")
         #I think there is a way to make it so your spelling and capitalization matters less, but lets go with this for now
-            
-    while True:
-        play_again = input("Play again? (y/n): ")    
+        restart = False
+        start = True
+
+    play_again = input("Play again? (y/n): ")
+    while restart:
         if play_again == "y":
             print ("\nRestarting...")
             break
@@ -336,4 +341,4 @@ while True:
             print ("\nI'm sorry. I don't understand. Please enter a lowercase y for Yes or a lowercase n for No.\n")
 
     if play_again == "n":
-        break
+        break #now that I changed a misspelled animal to restart the game instead of asking to play again, this isn't exiting the game but restarting it -_-
